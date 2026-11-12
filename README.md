@@ -1,64 +1,104 @@
 # House Price Prediction Using Machine Learning
 
-## Overview
-A regression project predicting house sale prices using property
-characteristics from the Ames Housing dataset.
+# Project Overview
 
-## Objectives
-- Explore and clean housing data.
-- Handle missing values with preprocessing pipelines.
-- Encode categorical features and scale numerical features.
-- Compare four regression algorithms.
-- Evaluate predictions using MAE, RMSE and R-squared.
-- Analyze feature importance.
+This project uses machine learning to predict house selling prices from housing-related features. It demonstrates data preprocessing, model comparison, cross-validation, feature importance, and model evaluation.
+
+## Problem Statement
+
+House prices depend on several factors, including property size, quality, and other characteristics. The goal is to train a regression model that estimates a house's selling price from available data.
 
 ## Dataset
-- Source: OpenML, house_prices, version 1
-- Original dataset: 1,460 rows and 81 columns
-- Target: SalePrice
-- Identifier column removed before modeling.
+
+The project uses housing data to train and evaluate regression models.
+
+**Dataset source:** [Verify and add the exact dataset source used in the notebook.]
+
+The target variable is `SalePrice`, representing the actual selling price.
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn(for ML)
+* Google Colab
+* GitHub for version control and project hosting
+
+Add Matplotlib and Seaborn here only if you used them in your notebook.
+
+## Machine Learning Workflow
+
+1. Load and inspect the housing dataset.
+2. Explore the data and identify data-quality issues.
+3. Handle missing values and prepare numerical and categorical features.
+4. Split the data into training and testing sets.
+5. Train and compare regression models.
+6. Use five-fold cross-validation for model comparison.
+7. Evaluate the selected model using MAE, RMSE, and R².
+8. Save the trained model and export the results.
 
 ## Models Compared
-- Linear Regression
-- Ridge Regression
-- Random Forest Regressor
-- Gradient Boosting Regressor
 
-## Model Selection
-Gradient Boosting was selected based on the lowest mean
-5-fold cross-validation RMSE.
+* Linear Regression
+* Ridge Regression
+* Random Forest
+* Gradient Boosting
 
-## Held-out Test Results
-- MAE: 16,922.49
-- RMSE: 30,265.12
-- R-squared: 0.8806
+**Selected model:** Gradient Boosting, based on the recorded model comparison and cross-validation results.
 
-Errors are expressed in the dataset's price units (USD).
+## Model Evaluation Results
 
-## Important Features
-OverallQual and GrLivArea ranked highly in the model's
-feature-importance analysis. Feature importance does not
-imply causation.
+The following results are recorded in the project:
 
-## Tools
-Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn,
-Google Colab and Joblib.
+| Metric                         |     Result |
+| ------------------------------ | ---------: |
+| Mean Absolute Error (MAE)      | $16,922.49 |
+| Root Mean Squared Error (RMSE) | $30,265.12 |
+| R² Score                       |     0.8806 |
 
-## Files
-- House price prediction notebook (.ipynb)
-- house_price_model.pkl
-- model_metrics.json
-- model_comparison.csv
-- cross_validation_results.csv
-- feature_importance.csv
+MAE measures the average absolute prediction error. RMSE gives more weight to larger errors. R² measures how much variation in the target is explained by the model on the evaluated dataset.
 
-## Limitations
-Performance is based on one train/test split and cross-validation
-on the training set. Results may not generalize to other markets
-or current property prices. The model is an educational project,
-not a professional property valuation.
+## Example Prediction
 
-## Reproducibility
-The notebook contains the data loading, preprocessing,
-training and evaluation workflow. The saved model includes
-the preprocessing pipeline.
+One recorded example:
+
+* Actual house price: $154,500.00
+* Predicted house price: $142,549.85
+* Absolute error: $11,950.15
+
+This is an example prediction, not a guarantee of performance for every house.
+
+## Project Files
+
+* `Prateek_D_S_House_Price_pridiction(ML_PROJECT).ipynb` — notebook for analysis and model training
+* `house_price_model.pkl` — saved model file
+* `model_metrics.json` — model evaluation metrics
+* `model_comparison.csv` — comparison of models
+* `cross_validation_results.csv` — cross-validation results
+* `feature_importance.csv` — feature importance results
+
+## How to Run
+
+1. Clone or download this repository.
+2. Open the notebook in Google Colab or Jupyter Notebook.
+3. Download and provide the same dataset used by the notebook.
+4. Install any required packages that are not already available.
+5. Run the notebook cells in order.
+6. Review the evaluation results and predictions.
+
+Note: The notebook and saved model should be verified to ensure the instructions work from a fresh environment.
+
+## Future Improvements
+
+* Validate the complete preprocessing and prediction pipeline.
+* Tune model hyperparameters using cross-validation.
+* Analyze prediction errors and improve reproducibility.
+* Build a simple prediction interface as a future enhancement.
+
+## Author
+
+Prateek Suryavanshi
+
+GitHub: [House Price Prediction ML Repository](https://github.com/prateek-suryavanshi465/House-Price-Prediction-ML)
+
