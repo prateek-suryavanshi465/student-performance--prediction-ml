@@ -12,8 +12,6 @@ House prices depend on several factors, including property size, quality, and ot
 
 The project uses housing data to train and evaluate regression models.
 
-**Dataset source:** [Verify and add the exact dataset source used in the notebook.]
-
 The target variable is `SalePrice`, representing the actual selling price.
 
 ## Technologies Used
